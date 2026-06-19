@@ -1,0 +1,8 @@
+name: Script
+on: workflow_dispatch
+jobs:
+  script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run script
+        run : echo "This is my first Github Aaction workflow"
