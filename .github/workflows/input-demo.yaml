@@ -6,6 +6,14 @@ on:
         description: Please provide the environment name to deploy
         required: true
         default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
+      artifact_tag:
+        description: Provide the artifact tag
+        required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
