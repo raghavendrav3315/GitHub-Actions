@@ -5,4 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run script
-        run : echo "This is my first Github Aaction workflow"
+        run : echo "This is my first Github Action workflow"
+        
+      - name: run multi script
+        run : | 
+          echo "First run in multi script"
+          echo "Seconf run in multi script"
