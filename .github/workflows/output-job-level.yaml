@@ -1,8 +1,9 @@
 name: output job level
-on: workflow_disptach
+on: workflow_dispatch
 jobs:
     build:
-        outputs: ${{steps.step1.outputs.version}}
+        outputs: 
+            version: ${{ steps.step1.outputs.version }}
         runs-on: ubuntu-latest
         steps:
             - name: step one
