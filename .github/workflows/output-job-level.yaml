@@ -1,7 +1,6 @@
 name: output job level
 on: workflow_dispatch
 jobs:
-<<<<<<< HEAD
   build:
       outputs:
         version: $${{ steps.step1.outputs.version }}
@@ -15,21 +14,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: bulding..
-          run: echo "Application is deployed with version ${{needs.build.outputs.version}}"
-=======
-    build:
-        outputs: 
-            version: ${{ steps.step1.outputs.version }}
-        runs-on: ubuntu-latest
-        steps:
-            - name: step one
-              id: step1
-              run: echo "version=1.15.7" >> $GITHUB_OUTPUT
-    deploy: 
-        needs: build
-        runs-on: ubutnu-latest
-        steps:
-            - name: step 2
-              run: echo "This is version ${{needs.build.outputs.version}}"
-
->>>>>>> 1429e488152003db8b6f1f0c9e75357904e7a512
+          run: echo "Application was deployed with version ${{needs.build.outputs.version}}"
