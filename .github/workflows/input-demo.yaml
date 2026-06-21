@@ -11,6 +11,7 @@ on:
           - dev
           - test
           - prod
+          - staging
       artifact_tag:
         description: Provide the artifact tag
         required: true
