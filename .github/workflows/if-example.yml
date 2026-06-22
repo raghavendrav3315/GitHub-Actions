@@ -13,7 +13,7 @@ jobs:
         - name: perform code quality checks
           run: echo "Performing code quality checks for feature branch"
   dev-deploy:
-      if: github.ref_name == 'develop' && gihub.event_name == 'push'
+      if: github.ref_name == 'develop' && github.event_name == 'push'
       runs-on: ubuntu-latest
       steps:
         - name: deploy to development environment
@@ -24,6 +24,7 @@ jobs:
       steps:
         - name: deploy to production environment
           run: echo "Deployed to production environment"
+  Success-notification:
       if: success() && !failure()
       runs-on: ubuntu-latest
       steps:
@@ -34,4 +35,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: send failure notification
-         run: echo "Sending Failure notification to team"
+          run: echo "Sending Failure notification to team"
